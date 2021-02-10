@@ -23,9 +23,8 @@
  *
  */
 
-const yelling = words => {
-  // Your code here
-}
+const yelling = words => words.map(word => word.toUpperCase())
+// Your code here
 
 /**
  *
@@ -38,6 +37,7 @@ const yelling = words => {
  */
 
 // ...
+const doubleTrouble = numbers => numbers.map(number => number * 2)
 
 /*
  * 3) Define a function stringyIndexes() that takes an array of
@@ -48,6 +48,9 @@ const yelling = words => {
  *
  */
 
+const stringyIndexes = strings =>
+  strings.map((string, index) => `${string} is at index ${index}`)
+
 // ...
 
 /*
@@ -57,7 +60,7 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+const onlyTheEvenSurvive = numbers => numbers.filter(number => number % 2 === 0)
 // ...
 
 /*
@@ -68,6 +71,8 @@ const yelling = words => {
  *
  */
 
+const onlyTheEvenIndexedSurvive = numbers =>
+  numbers.filter((number, index) => index % 2 === 0)
 // ...
 
 /*
@@ -86,7 +91,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+const bestMoviesOfTheYear = (movies, yearToMatch) =>
+  movies
+    .filter(movie => movie.year === yearToMatch && movie.score > 90)
+    .map(movie => movie.name)
 // ...
 
 /*
@@ -98,6 +106,7 @@ const yelling = words => {
  *
  */
 
+const everyoneIsOdd = numbers => numbers.every(number => number % 2 !== 0)
 // ...
 
 /*
@@ -109,6 +118,8 @@ const yelling = words => {
  *
  */
 
+const findTheNeedle = sentences =>
+  sentences.find(sentence => sentence.includes('needle'))
 // ...
 
 /*
@@ -120,6 +131,8 @@ const yelling = words => {
  *
  */
 
+const findTheNeedleIndex = sentences =>
+  sentences.findIndex(sentence => sentence.includes('needle'))
 // ...
 
 /*
@@ -131,6 +144,7 @@ const yelling = words => {
  *
  */
 
+const someoneToLove = words => words.some(word => word.length === 4)
 // ...
 
 /*
@@ -166,9 +180,7 @@ const yelling = words => {
  *
  */
 
-// function objectKeys(objectOfHobbies) {
-//   // Your code here
-// }
+// function objectKeys(objectOfHobbies) {}
 
 // ...
 
